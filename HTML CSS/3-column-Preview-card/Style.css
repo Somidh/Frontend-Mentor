@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Outfit:wght@300;400;600&family=Poppins:wght@200;300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend-Deca';
+    overflow: hidden;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 2em;
+}
+
+.car:nth-child(1) {
+    background: hsl(31, 77%, 52%);
+    border-radius: 8px 8px 0 0;
+}
+
+.car:nth-child(2) {
+    background: hsl(184, 100%, 22%);
+}
+
+.car:nth-child(3) {
+    background: hsl(179, 100%, 13%);
+    border-radius: 0 0 8px 8px;
+}
+
+.car {
+    padding: 1em 2em;
+    width: 15em;
+}
+
+.car h1 {
+    color: hsl(0, 0%, 95%);
+    text-align: start;
+    text-transform: uppercase;
+}
+
+.car p {
+    color: hsla(0, 0%, 100%, 0.75);
+    text-align: start;
+    width: 15em;
+    margin: 1em 0;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.car button {
+    padding: 1em 3em;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 12px;
+    border: none;
+    margin: 1em 0;
+}
+
+.car:nth-child(1) button {
+    color: hsl(31, 77%, 52%);
+}
+
+.car:nth-child(2) button {
+    color: hsl(184, 100%, 22%);
+}
+
+.car:nth-child(3) button {
+    color: hsl(179, 100%, 13%);
+}
+
+.L-design {
+    background: red;
+    width: 5px;
+    height: 50px;
+    position: absolute;
+    right: 50%;
+    top: 0;
+}
+
+.L-design::after {
+    content: "";
+    position: absolute;
+    background: red;
+    width: 50px;
+    height: 5px;
+    bottom: 0;
+}
+
+.circle-design{
+    border: 10px solid rgba(86, 86, 209,0.1);
+    /* background:  */
+    border-radius: 50%;
+    width: 15em;
+    height: 15em;
+    position: absolute;
+    right: -10px;
+    bottom: -50px;
+}
+
+
+
+@media screen and (min-width: 968px) {
+    .card {
+        /* display: flex; */
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+    }
+
+    .car {
+        border-radius: 0;
+        margin: 6em 0;
+
+    }
+
+    .car button {
+        margin-top: 4em;
+        margin-bottom: 2em;
+
+    }
+}

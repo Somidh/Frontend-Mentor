@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body {
+    font-family: 'Karla', sans-serif;
+    background: hsla(218, 22%, 67%, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.card {
+    text-align: start;
+    box-shadow:0px 0px 15px rgba(0,0,0,.3);
+}
+
+.upper-section {
+    background: #fff;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+}
+
+.upper-section h1 {
+    color: hsl(179, 62%, 43%);
+    font-size: 16px;
+}
+
+.upper-section h2 {
+    color: hsl(71, 73%, 54%);
+    font-size: 15px;
+    width: 13.2em;
+}
+
+.upper-section p {
+    font-size: 15px;
+    width: 15em;
+    line-height: 25px;
+    color: hsl(218, 22%, 67%);
+}
+
+.lower-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-part {
+    background: hsl(179, 74%, 34%);
+    color: hsl(204, 43%, 93%);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: .9em;
+    padding: 2em;
+
+}
+.first-part h4 span {
+    font-size: 25px;
+    margin-right: .5em;
+}
+
+.btn {
+    background: hsl(71, 73%, 54%);
+    color: hsl(204, 43%, 93%);
+    padding: 15px 0;
+    border:none;
+    box-shadow:0px 0px 15px rgba(0,0,0,.3);
+    border-radius: 5px;
+    margin-top: 1.5em;
+}
+
+.second-part {
+    background: hsl(179, 62%, 43%);
+    padding: 2em;
+}
+
+.second-part h3 {
+    color: hsl(204, 43%, 93%);
+    margin-bottom: 2em;
+}
+
+.second-part ul {
+    list-style: none;
+    color: hsl(204, 43%, 93%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.second-part ul li {
+    color: hsl(204, 43%, 93%);
+}
+
+
+
+@media screen and (min-width: 1440px) {
+    body {
+        height: 100vh;
+    }
+    .upper-section h1{
+        font-size: 1.5em
+    }
+    .upper-section h2{
+        font-size: 1.2em;
+        width: 25em;
+    }
+    .upper-section p {
+        width: 35em;
+        font-size: 15px;
+    }
+    .lower-section {
+        flex-direction: row;
+    }
+    .first-part,.second-part{
+        width: 20em;
+    }
+    .first-part h3{
+        font-size: 1.2em;
+    }
+    .first-part h4 span{
+        font-size: 2em;
+    }
+    .first-part p{
+        margin: .2em 0;
+    }
+    .btn{
+        padding: 1.2em;
+    }
+}

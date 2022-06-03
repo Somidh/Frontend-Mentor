@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins:wght@200;300;400;600&family=Raleway:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    --font-size: 15px;
+}
+
+body {
+    font-family: 'outfit', sans-serif;
+    height: 100vh;
+    background: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 20em;
+    /* height: 500px; */
+    background: hsl(216, 50%, 16%);
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+.card .img img {
+    width: 100%;
+    /* margin: 1em 1.4em; */
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.text {
+    text-align: start;
+    font-size: var(--font-size);
+}
+
+.text h1 {
+    color:  hsl(0, 0%, 100%);
+    font-size: 1.5em;
+}
+
+.text p {
+    color: hsl(215, 51%, 70%);
+    margin: 13px 0;
+}
+
+.eth-count {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eth-logo, .clock-img {
+    display: flex;
+    gap: .5em;
+}
+
+.eth-logo p {
+    color:  hsl(178, 100%, 50%);
+}
+
+.clock-img p{
+    color: hsl(215, 51%, 70%);
+    
+}
+.line{
+    width: 85%;
+    height:1px;
+    background: hsl(215, 32%, 27%);
+    margin: 1.2em auto;
+}
+.footer{
+    display: flex;
+    justify-content: flex-start;;
+    align-items: center;
+}
+.footer img{
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 10px;
+}
+.footer p{
+    color:hsl(215, 51%, 70%)
+}
+.footer p span{
+    color:  hsl(0, 0%, 100%);
+}

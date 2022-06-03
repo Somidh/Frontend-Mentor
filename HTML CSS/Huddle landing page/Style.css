@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap%27');
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(/IMG/bg-mobile.svg) no-repeat center center/cover;
+    background-color: hsl(257, 40%, 49%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 2em;
+    gap: 2em;
+}
+
+.body-img {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-self: start;
+}
+
+.logo img {
+    width: 10em;
+}
+
+.body-img img {
+    width: 18em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.text-content {
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 17em;
+}
+
+.text-content h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif;
+}
+
+.content .text-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9em;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.text-content .btn {
+    padding: 1em 5em;
+    width: fit-content;
+    align-self: center;
+    border-radius: 20px;
+    color: hsl(257, 40%, 49%);
+}
+
+.btn:hover {
+    background: hsl(300, 69%, 71%);
+    color: #fff;
+}
+
+.social-media ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 7px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: 5ms;
+}
+
+.social-media ul li a:hover {
+    color: hsl(300, 69%, 71%);
+    border: 1px solid hsl(300, 69%, 71%);
+}
+
+
+
+@media screen and (min-width: 1440px) {
+    body{
+        padding-inline: 8em;
+    }
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: space-between;
+        width: 100%;
+    }
+    .content .body-img img{
+        width: 100%;
+    }
+    .text-content{
+        width: 30em;
+        text-align: start;
+    }
+    .text-content h1{
+        font-size: 1.8em;
+    }
+    .text-content .btn{
+        align-self: start;
+    }
+    .social-media {
+        align-self: flex-end;
+    }
+}

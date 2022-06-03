@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    margin: 2em 0;
+}
+
+.container {
+    padding: 1.5em;
+}
+
+.about {
+    text-align: center;
+}
+
+.about h1 {
+    color: hsl(300, 43%, 22%);
+}
+
+.about p {
+    padding: 2em 0;
+    color: hsl(303, 10%, 53%);
+}
+
+.rate-bg li {
+    background: hsla(303, 10%, 53%, .2);
+    text-align: center;
+    list-style: none;
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    color: hsl(300, 43%, 22%);
+    font-weight: bold;
+    
+}
+
+.rate-bg li span {
+    display: inline-block;
+}
+
+.card {
+    background: hsl(300, 43%, 22%);
+    margin-top: 2em;
+    text-align: start;
+    border-radius: 10px;
+    padding: 1em;
+    color: hsla(0, 0%, 100%, .8);
+}
+
+.card .about {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1em;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+}
+
+.name .verification {
+    color: hsla(333, 80%, 67%, .5);
+}
+
+.card .about img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.card .about h4 {
+    font-size: .9em;
+    display: inline;
+}
+
+.details-text {
+    padding: 2em 0;
+}
+
+.details-text p {
+    font-size: .9em;
+    line-height: 20px;
+}
+
+
+
+@media screen and (min-width: 1440px) {
+    body{
+        padding: 2em 10em;
+    }
+    .container{
+        background: yellow;
+        padding: 5em;
+    }
+    .upper-section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about h1 {
+        font-size: 4em;
+        width: 10em;
+        text-align: start;
+    }
+
+    .about p {
+        font-size: 1.3em;
+        text-align: start;
+        width: 35em;
+    }
+    .rate-bg{
+        position:relative;
+    }
+    .rate-bg li{
+        padding: 1.5em 2em;
+        font-size: 1em;
+    }
+    .first-rating {
+        right: 20em;
+    }
+
+    .second-rating {
+        right: 15em;
+    }
+    .third-rating{
+        right: 10em;
+    }
+    .cards{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card{
+        width: 25em;
+        position: relative;
+
+    }
+    .card-2{
+        left: -5em;
+        top: 2em;
+    }
+    .card-3{
+        left: -10em;
+        top: 4em;
+    }
+
+}
