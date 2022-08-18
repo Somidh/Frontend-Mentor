@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap%27');
+
+
+:root {
+
+    /* Primary Text  */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+
+    /* Background-gradients */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+    /* Neutral text */
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+
+    /* Dividers */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+h3{
+    color:hsl(240, 6%, 50%);
+    font-weight: 500;
+    font-size: 14px;
+}
+h3:hover{
+    color: crimson;
+}
+body{
+    background: linear-gradient(to bottom, var(--Soft-violet) 10%, var(--Soft-blue));
+    font-family: 'Poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 30px;
+}
+.faqs{
+    margin-top: 5em;
+}
+.card{
+    position: relative;
+    background-color: #fff;
+    width: 25em;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 1px  20px 20px rgba(0,0,0,0.2);
+    margin-top: 5em;
+}
+img{
+    position: absolute;
+    top: -7em;
+    width: 15em;
+    right: 50%;
+    transform: translateX(50%);
+}
+.faqs h1{
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.line{
+    background-color: yellow;
+    width: 19em;
+    height: 2px;
+    margin:  1.5em 0;
+}
+p{
+    display: none;
+    color:rgb(133, 132, 132);
+}
+p.active{
+    display: block;
+}
+h3.active{
+    color:hsl(238, 29%, 16%);
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+.fa-solid{
+    color: crimson;
+}
+.fa-solid.active{
+    transform: rotate(180deg);
+}
