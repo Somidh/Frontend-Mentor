@@ -20,78 +20,155 @@
 }
 
 
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h3{
-    color:hsl(240, 6%, 50%);
-    font-weight: 500;
-    font-size: 14px;
-}
-h3:hover{
-    color: crimson;
-}
-body{
+
+body {
     background: linear-gradient(to bottom, var(--Soft-violet) 10%, var(--Soft-blue));
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 30px;
 }
-.faqs{
+
+.faqs {
     margin-top: 5em;
 }
-.card{
+
+.card {
+    display: flex;
+    flex-direction: column;
     position: relative;
     background-color: #fff;
-    width: 25em;
+    width: 23em;
     border-radius: 25px;
     padding: 20px;
-    box-shadow: 1px  20px 20px rgba(0,0,0,0.2);
+    box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.2);
     margin-top: 5em;
 }
-img{
+
+.faq {
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+img {
     position: absolute;
     top: -7em;
     width: 15em;
     right: 50%;
     transform: translateX(50%);
 }
-.faqs h1{
+
+.faqs h1 {
     text-align: center;
     margin-bottom: 1em;
     font-weight: 600;
 }
-.question{
+
+.question {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.line{
+
+.line {
     background-color: yellow;
-    width: 19em;
+    width: 22em;
     height: 2px;
-    margin:  1.5em 0;
+    margin: 1.5em 0;
 }
-p{
-    display: none;
-    color:rgb(133, 132, 132);
+
+.question {
+    color: hsl(240, 6%, 50%);
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 5px;
 }
-p.active{
-    display: block;
-}
-h3.active{
-    color:hsl(238, 29%, 16%);
-    font-size: 1em;
-    margin-bottom: 1em;
-}
-.fa-solid{
+
+.question:hover {
     color: crimson;
 }
-.fa-solid.active{
+
+.answer {
+    display: none;
+    color: rgb(133, 132, 132);
+    margin-left: 10px;
+
+}
+
+.faq-toggle {
+    color: crimson;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 4px;
+    right: -10px;
+    height: 30px;
+    width: 30px;
+}
+
+.faq.active .faq-toggle {
     transform: rotate(180deg);
+    color: crimson;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+}
+
+.faq.active .answer {
+    display: block;
+}
+
+.faq.active .question {
+    color: red;
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (min-width:1150px) {
+    .card {
+        flex-direction: row;
+        width: 60em;
+        overflow: hidden;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .card img {
+
+        left: -3em;
+        width: 30em;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .faqs {
+        text-align: start;
+        width: 50%;
+        margin-top: 3em;
+    }
+
+    .faqs h1 {
+        text-align: start;
+    }
+    .question, .answer{
+        margin: 0;
+    }
+    .faq-toggle {
+        right: 6em;
+    }
+    .faq.active .faq-toggle {
+        right: 6em;
+    }
+    .answer{
+        width: 23em;
+    }
 }

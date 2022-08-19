@@ -1,8 +1,22 @@
-const arrow = document.querySelector('.fa-solid')
-const questions = document.getElementsByTagName("h3")
-const answers = document.getElementsByTagName("p")
+const toggles = document.querySelectorAll('.faq-toggle')
 
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        
 
-arrow.addEventListener('click', () => {
-    
+        if(toggle.parentNode.classList.contains('active')){
+            remove()
+        }
+        else{
+            remove()
+            toggle.parentNode.classList.add('active')
+        }
+    })
 })
+
+
+let remove = () => {
+    toggles.forEach(toggle => {
+        toggle.parentNode.classList.remove('active')
+    })
+}
