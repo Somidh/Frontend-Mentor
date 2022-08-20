@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style.css">
+    <title>Article preview</title>
+</head>
+
+<body>
+    <div class="card">
+        <img src="/IMG/drawers.jpg" alt="">
+
+        <div class="content">
+            <div class="text">
+                <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+                <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.</p>
+            </div>
+          
+        </div>
+        <div class="person">
+            <div class="about-person">
+                <img class="avatar" src="/IMG/avatar-michelle.jpg" alt="">
+                <div class="details">
+                    <h1>Michelle Appleton</h1>
+                    <span>28 Jun 2020</span>
+                </div>
+            </div>
+            <button class="person-share-btn">
+                <img  src="/IMG/icon-share.svg" alt="">
+            </button>
+        </div>
+
+        <div class="share-links">
+            <h3>Share</h3>
+            <div class="links">
+               <img src="/IMG/icon-facebook.svg" alt="">
+               <img src="/IMG/icon-twitter.svg" alt="">
+               <img src="/IMG/icon-pinterest.svg" alt="">
+            </div>
+            <button class="share-btn">
+                <img  src="/IMG/icon-share.svg" alt="">
+            </button>
+            <div class="box"></div>
+        </div>
+        
+    </div>
+
+   <script>
+        const shareBtn = document.querySelector('.share-btn')
+        const personShareBtn = document.querySelector('.person-share-btn')
+        const shareLinks = document.querySelector('.share-links')
+       
+
+        shareBtn.addEventListener('click', () => {
+           
+            shareLinks.classList.remove('active')
+        })
+        personShareBtn.addEventListener('click', () =>{
+            shareLinks.classList.toggle('active')
+        })
+
+   </script>
+</body>
+
+</html>
