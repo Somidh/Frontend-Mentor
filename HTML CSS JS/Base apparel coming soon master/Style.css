@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    --first-gradient-Linear: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --second-gradient-Linear: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.desktop-bg {
+    display: none;
+}
+
+.logo {
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.8em;
+}
+
+.logo img {
+    width: 7em;
+}
+
+.content {
+    background-color: hsl(0, 100%, 98%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content>img {
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    width: 100%;
+    margin: 3em 0;
+}
+
+.text h1 {
+    color: hsl(0, 6%, 24%);
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    width: 10em;
+    line-height: 40px;
+}
+
+.text h1 span {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.text p {
+    color: hsl(0, 36%, 70%);
+    opacity: 0.8;
+    font-size: 13px;
+    word-spacing: 5px;
+    padding: 0 1.5em;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.email {
+    position: relative;
+}
+
+.email input {
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 30px;
+    padding: 1em;
+    width: 22em;
+    font-family: inherit;
+    color: hsl(0, 6%, 24%);
+    background-color: hsl(0, 100%, 98%);
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-family: inherit;
+}
+
+
+.arrow {
+    position: absolute;
+    border: none;
+    background-color: hsl(0, 36%, 70%);
+    width: 3.8em;
+    height: 2.7em;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: -4px 3px 4px rgba(0, 0, 0, .3);
+}
+
+.fa-solid {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 1.5em;
+}
+
+.error {
+    position: absolute;
+    right: 5em;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.error.active {
+    display: block;
+}
+#error-message{
+    color: red;
+}
+
+
+@media screen and (min-width:900px) {
+
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        z-index: 100;
+        
+    }
+    .logo{
+        background-color: hsl(0, 100%, 98%);
+        width: 30em;
+        padding: 2em 3em;
+    }
+    .logo img{
+        width: 9em;
+    }
+    .desktop-bg {
+        display: block;
+        height: 40em;
+        width: 1em;
+    }
+
+    .mobile-bg {
+        display: none;
+    }
+
+    .content {
+        flex-direction: row-reverse;
+    }
+
+    .text {
+        align-items: flex-start;
+        padding-left: 3em;
+        justify-content: flex-start;
+    }
+
+    .text h1 {
+        text-align: start;
+        font-size: 3em;
+        width: 8em;
+        line-height: 50px;
+    }
+
+    .text P {
+        text-align: start;
+        padding: 0
+    }
+
+    .email input {
+        padding: 1em 2em;
+        width: 28em;
+        font-family: inherit;
+        color: hsl(0, 6%, 24%);
+        background-color: hsl(0, 100%, 98%);
+    }
+
+    .arrow {
+        width: 6em;
+        height: 3.3em;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: -4px 3px 4px rgba(0, 0, 0, .3);
+    }
+}
+
+
+
+@media screen and (min-width:1150px){
+    .content{
+        width: 100%;
+    }
+    .text{
+        padding-left:7em;
+    }
+    .text h1{
+        font-size: 4em;
+        font-weight: 400;
+        line-height: 70px;
+    }
+    .text p{
+        width: 30em;
+    }
+}
