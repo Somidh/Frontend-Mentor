@@ -160,10 +160,9 @@ input:focus {
 .input.error .error-message{
     display: block;
 }
-.first-name-error.error #input{
-    gap: 3.5em;
+.input.error{
+    margin: 1em 0;
 }
-
 
 @media screen and (min-width: 450px){
     .input input{

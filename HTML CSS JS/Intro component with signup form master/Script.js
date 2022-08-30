@@ -7,23 +7,17 @@ const firstNameInput = document.querySelector('.first-name')
 const lastNameInput = document.querySelector('.last-name')
 const emailInput = document.querySelector('.email')
 const passwordInput = document.querySelector('.password')
+const input = document.querySelectorAll('input')
 
-claimBtn.addEventListener('click', () => {
-
-    if(firstNameInput.value === ""){
-       
-        firstNameError.parentNode.classList.add('error')
-    }
-    if(lastNameInput.value === ""){
-        lastNameError.parentNode.classList.add('error')
-
-    }
-    if(emailInput.value === ""){
-        emailError.parentNode.classList.add('error')
-
-    }
-    if(passwordInput.length > 5){
-        passwordError.parentNode.classList.add('error')
-
-    }
+claimBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+        input.forEach(inp => {
+            if(inp.value === ""){
+                inp.parentElement.classList.add('error')
+            }
+            else{
+                inp.parentElement.classList.remove('error')
+            }
+            
+        })
 })
