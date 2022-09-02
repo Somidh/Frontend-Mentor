@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="card">
+        <div class="card-front">
+            <div class="card-details">
+                <img src="/images/card-logo.svg" alt="">
+                <p class="card-no">
+                    0000 0000 0000 0000
+                </p>
+                <div class="card-name">
+                    <p class="name">JANE APPLESSED</p>
+                    <p class="card-expiry">
+                        00/00
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-back">
+            <p class="cvc-number">000</p>
+        </div>
+    </div>
+    </div>
+    <div id="card-details">
+        <div class="name-detail">
+            <label for="name-input">CARDHOLDER NAME</label>
+            <input type="text" id="name-input" placeholder="e.g.Jane Appleseed">
+            <p class="name-error">Can't be empty</p>
+        </div>
+        <div class="number-detail detail">
+            <label for="number-input">CARD NUMBER</label>
+            <input type="text" id="number-input" placeholder="e.g. 1234 5678 9123 0000">
+            <p class="card-number-error">Wrong format,numbers only</p>
+        </div>
+        <div class="expiry-date-cvc expiry">
+            <div class="expiry-date">
+                <label for="expiry-month">EXP.DATE (MM/YY)</label>
+                <div class="expiry-input expiry">
+                    <input type="text" id="expiry-month" placeholder="MM">
+                    <input type="text" placeholder="YY" id="expiry-year">
+                </div>
+                <p class="expiry-error">Can't be blank</p>
+            </div>
+            <div class="cvc">
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" placeholder="e.g.123">
+                <p class="cvc-error">Can't be blank</p>
+
+            </div>
+        </div>
+        <button class="btn">Confirm</button>
+    </div>
+    <div id="completed">
+        <img src="/images/icon-complete.svg" alt="">
+        <h1>THANK YOU!</h1>
+        <p>We've added your card details</p>
+        <button class="btn complete-btn">Continue</button>
+    </div>
+
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
