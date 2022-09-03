@@ -12,7 +12,8 @@ const nameError = document.querySelector('.name-error')
 const numberError = document.querySelector('.card-number-error')
 const expiryError = document.querySelector('.expiry-error')
 const cvcError = document.querySelector('.cvc-error')
-const completedPage = document.getElementById('completed')
+const completedPage = document.querySelector('.complete')
+const cardDetails = document.querySelector('.card-details')
 let numbers = /^[0-9]+$/;
 
 let form = false;
@@ -27,7 +28,7 @@ btn.addEventListener('click', (e) => {
         form = true;
 
     }
-    if (!numberInput.value.match(numbers)) {
+    if (!numberInput.value.match(numbers) && !numberInput.value.length == 12) {
         numberError.classList.add('error')
         form = false;
 
@@ -57,7 +58,7 @@ btn.addEventListener('click', (e) => {
 
     if (form) {
        
-        completedPage.classList.add('completed')
+        cardDetails.classList.add('completed')
         cardNo.innerHTML = numberInput.value
         cardName.innerHTML = nameInput.value
         cardCvc.innerHTML = cvc.value

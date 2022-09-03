@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(27, 66%, 92%);
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+
+.header {
+    background-color: hsl(10, 79%, 65%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 1em;
+}
+
+.my-balance p {
+    color: hsl(27, 66%, 92%);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.my-balance h2 {
+    color: hsl(33, 100%, 98%);
+    font-weight: 500;
+}
+
+.logo img {
+    width: 3.5em;
+}
+
+.chart {
+    background-color: hsl(33, 100%, 98%);
+    padding: 1em 2em;
+    border-radius: 12px;
+}
+
+.chart>h1 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 2em;
+}
+.graphs-container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+.amount{
+    visibility: hidden;
+    background-color:hsl(25, 47%, 15%);
+    color:hsl(33, 100%, 98%);
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+.graph{
+    background-color:hsl(10, 79%, 65%);
+    width: 2.3em;
+    border-radius: 6px;
+}
+.graph:hover .amount{
+    visibility: visible;
+    cursor: pointer;
+}
+
+.graphs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.days{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1.5em;
+}
+.days p{
+    font-size: 12px;
+    color:hsl(28, 10%, 53%);
+    margin-top: 8px;
+}
+.days:nth-child(3){
+    margin-right: 8px;
+}
+.mon .graph{
+    height: 3em;
+}
+.tue .graph{
+    height: 4.5em;
+}
+.wed .graph{
+    background-color: hsl(186, 34%, 60%);
+    height: 7em;
+}
+.thu .graph{
+    height: 4.2em;
+}
+.fri .graph{
+    height: 5.8em;
+}
+.sat .graph{
+    height: 5em;
+}
+.sun .graph{
+    height: 4em;
+}
+.line{
+    background-color:hsl(28, 10%, 53%);
+    width: 100%;
+    height: 1px;
+    margin: 2em 0;
+}
+.total-expense{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.this-month p{
+    color:hsl(28, 10%, 53%);
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.this-month h2{
+    font-size: 2em;
+    font-weight: 600;
+    color:hsl(25, 47%, 15%);
+}
+.last-month{
+    text-align: end;
+}
+.last-month p:nth-child(1){
+    color:hsl(25, 47%, 15%);
+    font-size: 14px;
+    font-weight: 600;
+}
+.last-month p:nth-child(2){
+    color:hsl(28, 10%, 53%);
+    font-size: 14px;
+}

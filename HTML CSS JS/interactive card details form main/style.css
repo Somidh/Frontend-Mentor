@@ -135,7 +135,6 @@ input::placeholder {
     font-weight: 400;
     opacity: .5;
 }
-
 .detail {
     display: flex;
     flex-direction: column;
@@ -173,17 +172,11 @@ input::placeholder {
 }
 
 #completed {
-    width: 23em;
-    gap: 1.3em;
-    padding: 0 1.5em;
+   
     display: none;
 }
 
-#completed.completed {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 #completed img {
     width: 5em;
@@ -217,9 +210,18 @@ input::placeholder {
     display: block;
 }
 
-#completed.completed #card-details{
+.cardDetails.completed{
     display: none;
 }
+.cardDetails.completed #completed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23em;
+    gap: 1.3em;
+    padding: 0 1.5em;
+}
+
 
 
 @media screen and (min-width: 450px) {
