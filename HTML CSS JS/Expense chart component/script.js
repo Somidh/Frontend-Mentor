@@ -1,10 +1,26 @@
-// let myRequest = new Request('./data.json')
+const days = document.querySelectorAll('.day')
+const amounts = document.querySelectorAll('.amount')
+const graphs = document.querySelectorAll('.graph')
+
 
 fetch('./data.json')
+.then((res) => res.json())
 .then((data) => {
-    return data.json()
+   for(let i = 0; i < amounts.length; i++){
+        amounts[i].innerHTML = data[i].amount
+   }
 })
-.then((actualData) => {
-    console.log(actualData[2].amount)
-    console.log(actualData)
+
+graphs.forEach((graph) => {
+    graph.addEventListener('mouseover', () => {
+      graph.parentElement.classList.add('hovered')
+    })
+    graph.addEventListener('mouseout', () => {
+      graph.parentElement.classList.remove('hovered')
+    })
 })
+
+
+
+
+

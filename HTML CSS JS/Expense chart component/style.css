@@ -69,7 +69,7 @@ body {
     gap: 1em;
 }
 .amount{
-    visibility: hidden;
+    display: none;
     background-color:hsl(25, 47%, 15%);
     color:hsl(33, 100%, 98%);
     padding: 5px 10px;
@@ -81,10 +81,16 @@ body {
     width: 2.3em;
     border-radius: 6px;
 }
-.graph:hover .amount{
-    visibility: visible;
+
+.graph:hover {
     cursor: pointer;
+    opacity: .7;
 }
+.graphs.hovered .amount{
+    display: block;
+}
+
+
 
 .graphs{
     display: flex;
