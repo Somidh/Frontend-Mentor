@@ -1,4 +1,3 @@
-const days = document.querySelectorAll('.day')
 const amounts = document.querySelectorAll('.amount')
 const graphs = document.querySelectorAll('.graph')
 
