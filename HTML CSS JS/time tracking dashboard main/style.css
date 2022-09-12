@@ -175,6 +175,15 @@ body {
     font-size: 13px;
     color: #dddd;
 }
+.daily.active{
+    color: #fff;
+}
+.weekly.active{
+    color: #fff;
+}
+.monthly.active{
+    color: #fff;
+}
 
 
 @media screen and (min-width: 1000px) {
