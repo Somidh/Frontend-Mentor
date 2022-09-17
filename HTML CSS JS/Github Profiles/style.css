@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root{
+    --background-dark-color:rgb(20 28 47);
+    --card-dark-color: rgb(31 42 72);
+    --search-btn-color: rgb(2 120 251)
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:var(--background-dark-color);
+}
+.container{
+    padding: 0 1em;
+}
+
+.mode .light.active{
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content:center;
+    gap: 1.2em;
+    cursor: pointer;
+}
+.mode .light.hide{
+    display: none;
+}
+.light p{
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.mode .dark.active{
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2em;
+    cursor: pointer;
+}
+.mode .dark.hide{
+    display: none;
+}
+.dark p{
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.search-bar{
+    margin: 2em 0;
+}
+.search-bar input{
+    width: 100%;
+    background-color: var(--card-dark-color);
+    border: none;
+    color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    font-size: 1em;
+}
+input:focus{
+    outline: none;
+}
+.search-bar input::placeholder{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.card{
+    background-color: var(--card-dark-color);
+    padding: 2em;
+    border-radius: 10px;
+    max-width: 40em;
+}
+.avatar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5em;
+}
+.card .avatar img{
+    width: 6em;
+    border-radius: 50%;
+}
+.user-name{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+}
+.user-name h1{
+    font-size: 1.2em;
+    font-weight: 500;
+    word-spacing: 10px;
+}
+.user-name span{
+    color: var(--search-btn-color);
+    margin-bottom: 6px;
+}
+.user-name p{
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.about-user{
+    margin: 2em 0;
+}
+.about-user p{
+    color: #eeee;
+    font-weight: 400;
+    word-spacing: 8px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+.user-details{
+    background-color: var(--background-dark-color);
+    padding: 1.5em 2.5em;
+    border-radius: 10px;
+    margin-bottom: 1.5em;
+}
+.user-details ul{
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-details ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+.user-details ul li strong{
+    font-weight: 800;
+    font-size: 1.2em;
+}
+.other-details{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.other-details > *{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.other-details > * i{
+    color: #fff;
+    font-size: 1.5em;
+}
+.other-details > * p{
+    color: #eeee;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+}
+.link a{
+    text-decoration: none;
+    color: #eeee;
+    letter-spacing: 1px;
+}
+.error-msg{
+    color: #fff;
+}
+
