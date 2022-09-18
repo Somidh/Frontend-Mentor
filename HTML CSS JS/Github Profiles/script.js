@@ -118,8 +118,11 @@ function createCard(user) {
 
 
 function userbio(user){
-    if(user.bio === null || user.bio){
+    if(user.bio === null || !user.bio){
         return "This person has not added anything in his bio"
+    }
+    else{
+        return user.bio
     }
 }
 
