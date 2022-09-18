@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -19,37 +20,19 @@ body{
     height: 100vh;
     background-color:var(--background-dark-color);
 }
+
 .container{
     padding: 0 1em;
+    min-width: 20em;
 }
 
-.mode .light.active{
-    display: flex;
-    color: #fff;
-    align-items: center;
-    justify-content:center;
-    gap: 1.2em;
-    cursor: pointer;
-}
-.mode .light.hide{
-    display: none;
-}
 .light p{
     font-weight: 500;
     letter-spacing: 5px;
     text-transform: uppercase;
 }
-.mode .dark.active{
-    display: flex;
-    color: #fff;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2em;
-    cursor: pointer;
-}
-.mode .dark.hide{
-    display: none;
-}
+
+
 .dark p{
     font-weight: 500;
     letter-spacing: 5px;
@@ -60,6 +43,8 @@ body{
 }
 .search-bar input{
     width: 100%;
+    min-width: 20em;
+    max-width: 40em;
     background-color: var(--card-dark-color);
     border: none;
     color: #fff;
@@ -79,6 +64,7 @@ input:focus{
     background-color: var(--card-dark-color);
     padding: 2em;
     border-radius: 10px;
+    min-width: 20em;
     max-width: 40em;
 }
 .avatar{
@@ -148,25 +134,30 @@ input:focus{
 }
 .other-details{
     display: flex;
-    flex-direction: column;
-    gap: 1em;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 30em;
+    gap: 1.2em;
 }
 .other-details > *{
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 10px;
 }
 .other-details > * i{
     color: #fff;
     font-size: 1.5em;
+    cursor: pointer;
 }
 .other-details > * p{
     color: #eeee;
     font-size: 1em;
     font-weight: 400;
     letter-spacing: 1px;
-
+    cursor:pointer
 }
+
 .link a{
     text-decoration: none;
     color: #eeee;
@@ -175,4 +166,52 @@ input:focus{
 .error-msg{
     color: #fff;
 }
+
+
+
+@media screen and (min-width: 560px){
+    .other-details .github-link,.link{
+        margin-left: 4em;
+    }
+   
+   
+}
+
+@media screen and (max-width: 500px){
+    /* .other-details{
+        flex-dre
+    } */
+}
+
+
+
+/* .mode .light {
+    display: none;
+}
+.mode .light.active{
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content:center;
+    gap: 1.2em;
+    cursor: pointer;
+}
+
+.mode .dark{
+    display: none;
+}
+
+
+.dark.active body{
+    background-color: #fff;
+}
+
+ .dark.active{
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2em;
+    cursor: pointer;
+} */
 
