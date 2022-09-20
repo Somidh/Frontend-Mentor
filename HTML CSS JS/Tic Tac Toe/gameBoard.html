@@ -5,10 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="/script.js"></script>
-    <link rel="stylesheet" href="/style.css">
+    <script defer src="https://kit.fontawesome.com/b2fdf641bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/gameBoard.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="cross">
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                </div>
+                <div class="logo-circle">
+                    <div class="inner-circle"></div>
+                </div>
+            </div>
+            <!-- <div class="turn">
+                <div class="turn-circle">
+                    <div class="turn-inner-circle"></div>
+                </div>
+                <h1>Turn</h1>
+            </div> -->
+            <div class="reload">
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+        </div>
+        <div class="board x">
+            <div class="cells" data-cell></div>
+            <div class="cells" data-cell></div>
+            <div class="cells" data-cell></div>
+            <div class="cells" data-cell></div>
+            <div class="cells" data-cell></div>
+            <div class="cells" data-cell></div>
+            <div class="cells" data-cell></div>
+            <div class="cells" data-cell></div>
+            <div class="cells" data-cell></div>
+        </div> 
+       
+    </div>
+
+    <div class="winning-message">
+        <div class="wishing-container">
+            <h2 class="message"></h2>
+            <h1 class="result"></h1>
+           <div class="buttons">
+            <button class="quit-btn">quit</button>
+            <button class="next-round-btn">next round</button>
+           </div>
+        </div>
+      
+    </div>
+     
 </body>
 </html>
