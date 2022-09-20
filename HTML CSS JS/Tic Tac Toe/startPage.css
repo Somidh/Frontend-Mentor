@@ -38,9 +38,10 @@ button {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 20em;
+    width: 30em;
     gap: 2em;
     z-index: -100;
+    padding: 0 2em;
 }
 
 .logo {
@@ -91,9 +92,8 @@ button {
     justify-content: center;
     gap: 1em;
     padding: 1.5em;
-    width: 100%;
     z-index: -50;
-
+    width: 100%;
 }
 .sign-select-container > h1{
     color: var(--grey);
@@ -104,7 +104,7 @@ button {
     position: relative;
     width: 100%;
     height: 4em;
-    max-width: 30em;
+    /* max-width: 30em; */
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
@@ -115,11 +115,11 @@ button {
     position: absolute;
     left: 20%;
     top: 20%;
-    /* background-color: yellow; */
-    width: 5em;
+    width: 50%;
     height: 3em;
     border-radius: var(--border-radius);
 }
+
 .select-circle{
     position: absolute;
     right:20%;
@@ -129,12 +129,19 @@ button {
 }
 .selector{
     position: absolute;
+    right : 7px;
     background-color: var(--grey);
-    width: 8em;
+    width: 50%;
     min-width: 5em;
     max-width: 10em;
     height: 3em;
-    right: 8px;
     z-index: -5;
     border-radius: var(--border-radius);
+    transition:  0.3s ease-in;
+}
+.selector.cross-selected{
+    left: 7px;
+}
+.selector.circle-selected{
+    right: 8px;
 }
