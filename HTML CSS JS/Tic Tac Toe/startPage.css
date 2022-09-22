@@ -24,7 +24,9 @@ body {
     background-color: var(--black);
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100vh;
+    
 }
 
 button {
@@ -40,7 +42,6 @@ button {
     text-align: center;
     width: 30em;
     gap: 2em;
-    z-index: -100;
     padding: 0 2em;
 }
 
@@ -92,24 +93,27 @@ button {
     justify-content: center;
     gap: 1em;
     padding: 1.5em;
-    z-index: -50;
     width: 100%;
 }
 .sign-select-container > h1{
     color: var(--grey);
     font-size: 1em;
 }
+.sign-select-container > p{
+    color: var(--grey);
+    font-weight: 600;
+    opacity: .7;
+    font-size: 14px;
+}
 .select-sign{
     background-color: var(--black);
     position: relative;
     width: 100%;
     height: 4em;
-    /* max-width: 30em; */
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: -10;
 }
 .select-cross{
     position: absolute;
@@ -118,6 +122,7 @@ button {
     width: 50%;
     height: 3em;
     border-radius: var(--border-radius);
+    cursor: pointer;
 }
 
 .select-circle{
@@ -125,23 +130,48 @@ button {
     right:20%;
     top: 50%;
     transform: translateY(-50%);
-    z-index: -1;
+    cursor: pointer;
 }
+
 .selector{
     position: absolute;
-    right : 7px;
+    left : 7px;
     background-color: var(--grey);
     width: 50%;
     min-width: 5em;
     max-width: 10em;
     height: 3em;
-    z-index: -5;
     border-radius: var(--border-radius);
-    transition:  0.3s ease-in;
+    transition: transform 0.3s ease-in;
 }
+
 .selector.cross-selected{
-    left: 7px;
+    transform: translateX(0);
 }
 .selector.circle-selected{
-    right: 8px;
+    transform: translateX(187px);
+}
+
+.start-game-btn{
+    background-color: var(--orange);
+    border: none;
+    box-shadow: inset 0 -8px 0 #cc8b13;
+    border-radius: 10px;
+    width: 100%;
+    height: 67px;
+    padding: 0 30px 8px;
+    font-family: inherit;
+    line-height: 25px;
+    cursor: pointer;
+}
+.start-game-btn a{
+    text-decoration: none;
+    color:#1a2a33;
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+}
+.start-game-btn:hover{
+    background-color: var(--lightOrange);
 }

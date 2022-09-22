@@ -7,7 +7,7 @@
     <script defer src="/script.js"></script>
     <script defer src="https://kit.fontawesome.com/b2fdf641bc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/gameBoard.css">
-    <title>Document</title>
+    <title>Tic Tac Toe</title>
 </head>
 <body>
     <div class="container">
@@ -42,15 +42,41 @@
             <div class="cells" data-cell></div>
             <div class="cells" data-cell></div>
         </div> 
+
+
+        <div class="save-result">
+            <div class="player-one-cell">
+                <p class="player player-one">X (player 1)</p>
+                <p class=" player-one-count count">0</p>
+            </div>
+            <div class="draw-cell">
+                <p class="player">ties</p>
+                <p class=" ties-count count">0</p>
+            </div>
+            <div class="player-two-cell">
+                <p class="player player-two">O (Player 2)</p>
+                <p class=" player-two-count count">0</p>
+            </div>
+        </div>
        
     </div>
+
+  <div class="restart-game">
+    <div class="restart-container">
+        <h1>Restart game</h1>
+        <div class="buttons">
+            <button class=" restart-btn no-btn">no, cancel</button>
+            <button class=" restart-btn yes-btn">yes, restart</button>
+        </div>
+    </div>
+  </div>
 
     <div class="winning-message">
         <div class="wishing-container">
             <h2 class="message"></h2>
             <h1 class="result"></h1>
            <div class="buttons">
-            <button class="quit-btn">quit</button>
+            <a class="quit-btn" href="/startPage.html"><button>quit</button></a>
             <button class="next-round-btn">next round</button>
            </div>
         </div>
