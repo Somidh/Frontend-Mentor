@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="startPage.css">
+        <script defer src="/script.js"></script>
     <title>Tic Tac Toe</title>
 </head>
 <body>
@@ -18,31 +19,45 @@
                 <div class="inner-circle"></div>
             </div>
         </div>
-        <div class="sign-select-container">
-            <h1>pick player's mark</h1>
-            <div class="select-sign">
-                <div class="selector"></div>
-                <div  class="select-cross">
-                    <div class="cross second-cross">
-                        <div class="line-1"></div>
-                        <div class="line-2"></div>
+            <div class="sign-select-container">
+                <h1>pick player's mark</h1>
+                <div class="select-sign">
+                    <div class="selector cross-selected"></div>
+                    <div  class="select-cross">
+                        <div class="cross second-cross">
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                        </div>
+                    </div>
+                    <div class="select-circle">
+                        <div class="circle second-circle">
+                            <div class="inner-circle"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="select-circle">
-                    <div class="circle second-circle">
-                        <div class="inner-circle"></div>
-                    </div>
-                </div>
+                <p>Remember: x goes first</p>
             </div>
-            <p>Remember: x goes first</p>
-        </div>
-        <button class="cpu">new game (vs cpu)</button>
-        <button class="player">new game (vs player)</button>
+        <button class="start-game-btn"><a href="/gameBoard.html">New Game</a></button>
     </div>
 
 
 
-    <script src="/script.js"></script>
+
+    <script>
+  const selectionCircle = document.querySelector('.select-circle')
+const SelectionCross = document.querySelector('.select-cross')
+const selector = document.querySelector('.selector')
+
+selectionCircle.addEventListener('click', () => {
+    selector.classList.remove('cross-selected')
+    selector.classList.add('circle-selected')
+})
+SelectionCross.addEventListener('click', () => {
+    selector.classList.remove('circle-selected')
+    selector.classList.add('cross-selected')
+})
+
+    </script>
     
 </body>
 </html>
